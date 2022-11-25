@@ -23,7 +23,7 @@
       <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
       <ul class="navbar-nav px-3">
         <li class="nav-item text-nowrap">
-          <a class="nav-link" href="/index.html">Sign out</a>
+            <a class="nav-link" href="/index.html">Sign out</a>
         </li>
       </ul>
     </nav>
@@ -34,15 +34,9 @@
           <div class="sidebar-sticky pt-3">
             <ul class="nav flex-column">
               <li class="nav-item">
-                <a class="nav-link active" href="#">
+                <a class="nav-link" href="/dashboard/index.html">
                   <span data-feather="home"></span>
-                  Dashboard <span class="sr-only">(current)</span>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/dashboard/regionalDashboard.html">
-                  <span data-feather="home"></span>
-                  RC Dashboard
+                  Dashboard 
                 </a>
               </li>
               <li class="nav-item">
@@ -52,9 +46,9 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link active" href="#">
                   <span data-feather="users"></span>
-                  Regional Commisioners
+                  Regional Commisioners  <span class="sr-only">(current)</span>
                 </a>
               </li>
               <li class="nav-item">
@@ -93,51 +87,103 @@
               <li class="nav-item">
                 <a class="nav-link" href="#">
                   <span data-feather="file-text"></span>
-                  SMS Flows Finished
+                  Social engagement
                 </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">
                   <span data-feather="file-text"></span>
-                  SMS Flows Breaks
+                  Year-end sale
                 </a>
               </li>
             </ul>
           </div>
         </nav>
         <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
-          <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-            <h1 class="h2">Dashboard</h1>
+                <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3">
+                  <h1 class="h2">Regional Commissioners</h1>
+                  <div class="btn-toolbar mb-2 mb-md-0">
+                    <div class="btn-group mr-2">
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Export</button>
+                    </div>
+                    <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle">
+                      <span data-feather="calendar"></span>
+                      This week
+                    </button>
+                  </div>
+                </div>
+          <div class="table-responsive">
+            <table class="table table-striped table-sm">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Name of the RC</th>
+                  <th>Number of Region</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Chalamila</td>
+                  <td>Kagera</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Juma Zuberi Homera</td>
+                  <td>Mbeya</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Amos Makala</td>
+                  <td>Dar es Salaam</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>Kaganda</td>
+                  <td>Kigoma</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>Rugambwa Maswa</td>
+                  <td>Mwanza</td>
+                </tr>
+            
+                <tr>
+                  <td>6</td>
+                  <td>Deo Sanga</td>
+                  <td>Mtwara</td>
+                </tr>
+                <tr>
+                  <td>7</td>
+                  <td>Dulla</td>
+                  <td>Njombe</td>
+                </tr>
+                <tr>
+                  <td>8</td>
+                  <td> Eng Manumba</td>
+                  <td>Dodoma</td>
+                </tr>
+                <tr>
+                  <td>9</td>
+                  <td>Mwinyi Amos</td>
+                  <td>Zanzibar</td>
+                </tr>
+                <tr>
+                  <td>10</td>
+                  <td>Msigwa Gerson</td>
+                  <td>Iringa</td>
+                </tr>
+                </tr>
+              </tbody>
+            </table>
           </div>
-    
-          <div class="row">
-            <div class="col-md-6">   
-              <h4>Regions</h4>
-                       <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas>
-            </div>
-            <div class="col-md-6">         
-              <h3>Sectors</h3>   
-               <canvas class="my-4 w-100" id="myChart1" width="900" height="380"></canvas>
-            </div>
-        
-          <div class="row">
-            <div class="col-md-6">   
-              <h4>Provinces</h4>
-                       <canvas class="my-4 w-100" id="myChart2" width="900" height="380"></canvas>
-            </div>
-            <div class="col-md-6">           
-              <h4>Categories</h4>  
-              <canvas class="my-4 w-100" id="myChart3" width="900" height="380"></canvas>
-            </div>
-        
-          </div>
-        
         </main>
       </div>
     </div>
-   
+
     <script>
-      (function () {
+        (function () {
     'use strict'
   
     feather.replace()
@@ -149,13 +195,13 @@
       type: 'line',
       data: {
         labels: [
-          'Dar es Salaam',
-          'Kigoma',
-          'Mbeya',
-          'Arusha',
-          'Njombe',
-          'Mpanda',
-          'Dodoma'
+          'Sunday',
+          'Monday',
+          'Tuesday',
+          'Wednesday',
+          'Thursday',
+          'Friday',
+          'Saturday'
         ],
         datasets: [{
           data: [
@@ -189,162 +235,7 @@
     })
   })()
     </script>
-
-<script>
-  (function () {
-'use strict'
-
-feather.replace()
-
-// Graphs
-var ctx = document.getElementById('myChart1')
-// eslint-disable-next-line no-unused-vars
-var myChart = new Chart(ctx, {
-  type: 'doughnut',
-  data: {
-    labels: [
-      'Afya',
-      'Kilimo',
-      'Elimu',
-      'Uchumi',
-      'Maji',
-      'Usalama',
-    ],
-    datasets: [{
-      data: [
-        15339,
-        21345,
-        18483,
-        24003,
-        23489,
-        24092      ],
-      lineTension: 0,
-      backgroundColor: 'transparent',
-      borderColor: '#007bff',
-      borderWidth: 4,
-      pointBackgroundColor: '#007bff'
-    }]
-  },
-  options: {
-    scales: {
-      yAxes: [{
-        ticks: {
-          beginAtZero: false
-        }
-      }]
-    },
-    legend: {
-      display: false
-    }
-  }
-})
-})()
-</script>
-
-<script>
-  (function () {
-'use strict'
-
-feather.replace()
-
-// Graphs
-var ctx = document.getElementById('myChart2')
-// eslint-disable-next-line no-unused-vars
-var myChart = new Chart(ctx, {
-  type: 'pie',
-  data: {
-    labels: [
-      'Rungwe',
-      'Mbeya Mjini',
-      'Ilala',
-      'Kinondoni',
-      'Mpwapwa',
-      'Moshi',
-      'Chunya',
-    ],
-    datasets: [{
-      data: [
-        15339,
-        21345,
-        18483,
-        24003,
-        23489,
-        24092,
-        12034
-      ],
-      lineTension: 0,
-      backgroundColor: 'transparent',
-      borderColor: '#007bff',
-      borderWidth: 4,
-      pointBackgroundColor: '#007bff'
-    }]
-  },
-  options: {
-    scales: {
-      yAxes: [{
-        ticks: {
-          beginAtZero: false
-        }
-      }]
-    },
-    legend: {
-      display: false
-    }
-  }
-})
-})()
-</script>
-
-<script>
-  (function () {
-'use strict'
-
-feather.replace()
-
-// Graphs
-var ctx = document.getElementById('myChart3')
-// eslint-disable-next-line no-unused-vars
-var myChart = new Chart(ctx, {
-  type: 'bar',
-  data: {
-    labels: [
-      'Mapendekezo',
-      'Pongezi',
-      'Dukuduku',
-      'Changamoto',
-      'Matatizo',
-      
-    ],
-    datasets: [{
-      data: [
-        15339,
-        21345,
-        18483,
-        24003,
-        23489,
-        24092,
-        12034
-      ],
-      lineTension: 0,
-      backgroundColor: 'coral',
-      pointBackgroundColor: '#007bff'
-    }]
-  },
-  options: {
-    scales: {
-      yAxes: [{
-        ticks: {
-          beginAtZero: false
-        }
-      }]
-    },
-    legend: {
-      display: false
-    }
-  }
-})
-})()
-</script>
+   
 
     <!-- <div  class="row">
       <h3>footer</h3>

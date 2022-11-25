@@ -34,15 +34,15 @@
           <div class="sidebar-sticky pt-3">
             <ul class="nav flex-column">
               <li class="nav-item">
-                <a class="nav-link active" href="#">
+                <a class="nav-link" href="/dashboard/index.html">
                   <span data-feather="home"></span>
-                  Dashboard <span class="sr-only">(current)</span>
+                  Dashboard 
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/dashboard/regionalDashboard.html">
+                <a class="nav-link active" href="/dashboard/regionalDashboard.html">
                   <span data-feather="home"></span>
-                  RC Dashboard
+                  RC Dashboard <span class="sr-only">(current)</span>
                 </a>
               </li>
               <li class="nav-item">
@@ -107,12 +107,12 @@
         </nav>
         <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
           <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-            <h1 class="h2">Dashboard</h1>
+            <h1 class="h2">Regional Commissioner Dashboard</h1>
           </div>
     
           <div class="row">
             <div class="col-md-6">   
-              <h4>Regions</h4>
+              <h4>Groups</h4>
                        <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas>
             </div>
             <div class="col-md-6">         
@@ -149,13 +149,10 @@
       type: 'line',
       data: {
         labels: [
-          'Dar es Salaam',
-          'Kigoma',
-          'Mbeya',
-          'Arusha',
-          'Njombe',
-          'Mpanda',
-          'Dodoma'
+          'Wazee',
+          'Wanaume',
+          'Wanawake',
+          'Vijana',
         ],
         datasets: [{
           data: [
@@ -163,9 +160,7 @@
             21345,
             18483,
             24003,
-            23489,
-            24092,
-            12034
+            23489
           ],
           lineTension: 0,
           backgroundColor: 'transparent',
